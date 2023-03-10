@@ -61,21 +61,21 @@ function renderizarDatosUsuario() {
 
 function recorrerListadoYRenderizarTarjetas() {
   /* ------------------ PUNTO 3: Escribe tu codigo desde aqui ------------------ */
+  // 1ro tengo que insertar los parrafos con clase 'caja' - con template
+  // 2do Francia y Brasil, pero aca tengo que agregar los atributos que estan en el array de objetos 'listado'
   const fila = document.getElementById('fila');
   fila.innerHTML= " "
   listado.forEach(element => {
   const miTemplate = `
   <div class="caja"> 
   <img src= ${element.imgUrl} alt=${element.lenguajes}>
-  <p>${element.lenguajes}</p>
-  <p>${element.bimestre}</p>
+  <p>Lenguaje: ${element.lenguajes}</p>
+  <br>
+  <p>Bimestre: ${element.bimestre}</p>
   </div>
   `;
   fila.innerHTML += miTemplate;
   })
-
-  // 1ro tengo que insertar los parrafos con clase 'caja' - con template
-  // 2do Francia y Brasil, pero aca tengo que agregar los atributos que estan en el array de objetos 'listado'
 };
     
 
@@ -89,3 +89,12 @@ function alternarColorTema() {
 }
 
 /* --------------------- PUNTO 5: Escribe tu codigo aqui --------------------- */
+// const completarConF = document.querySelector('#cambiar-tema');
+
+document.addEventListener("keypress", (e) => {
+  const datosOcultos = document.querySelector('.oculto')
+  console.log(datosOcultos);
+  if((e.key == 'F') || (e.key == 'f')){
+    datosOcultos.removeAttribute("class")
+  }
+});
