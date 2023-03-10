@@ -74,20 +74,15 @@ function recorrerListadoYRenderizarTarjetas() {
   // 1ro tengo que insertar los parrafos con clase 'caja' - con template
   // 2do Francia y Brasil, pero aca tengo que agregar los atributos que estan en el array de objetos 'listado'
 };
-  
- 
-  
-  
+    
 
 
 
 
 function alternarColorTema() {
   /* --------------------- PUNTO 4: Escribe tu codigo aqui --------------------- */
- 
+ sitio.classList.toggle('dark');
   
-
-
 }
 
 /* --------------------- PUNTO 5: Escribe tu codigo aqui --------------------- */
