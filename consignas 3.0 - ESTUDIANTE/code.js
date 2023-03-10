@@ -89,7 +89,6 @@ function alternarColorTema() {
 }
 
 /* --------------------- PUNTO 5: Escribe tu codigo aqui --------------------- */
-// const completarConF = document.querySelector('#cambiar-tema');
 
 document.addEventListener("keypress", (e) => {
   const datosOcultos = document.querySelector('.oculto')
