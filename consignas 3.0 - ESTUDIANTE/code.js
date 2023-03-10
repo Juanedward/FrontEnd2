@@ -61,16 +61,19 @@ function renderizarDatosUsuario() {
 
 function recorrerListadoYRenderizarTarjetas() {
   /* ------------------ PUNTO 3: Escribe tu codigo desde aqui ------------------ */
-  
-  listado.forEach(element => {
   const fila = document.getElementById('fila');
+  fila.innerHTML= " "
+  listado.forEach(element => {
   const miTemplate = `
-  <div class="caja"> </div>
-  <img src= "${listado.imgUrl}" alt="${listado.lenguajes}">
-  <p>${listado.bimestre}</p>
+  <div class="caja"> 
+  <img src= ${element.imgUrl} alt=${element.lenguajes}>
+  <p>${element.lenguajes}</p>
+  <p>${element.bimestre}</p>
+  </div>
   `;
   fila.innerHTML += miTemplate;
   })
+
   // 1ro tengo que insertar los parrafos con clase 'caja' - con template
   // 2do Francia y Brasil, pero aca tengo que agregar los atributos que estan en el array de objetos 'listado'
 };
